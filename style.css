@@ -1,0 +1,34 @@
+.container{
+    text-align: center;
+    
+    }
+    
+    h1{
+        text-align: center;
+        margin: 50px;
+    }
+    
+    #startBtn,#generateBtn{
+        border-radius: 30px;
+        padding: 15px;
+    }
+    
+    
+    form{
+        border: solid black;
+        border-radius: 30px;
+        width: 400px;
+        margin-left: 35%;
+        margin-right:35%;
+        margin-top: 20px;
+        padding: 20px;
+        /* display: none; */
+        
+    }
+    
+    
+    .form-group{
+        
+        margin: 20px;
+        
+    }
