@@ -32,3 +32,20 @@
         margin: 20px;
         
     }
+
+    .flashCardQuestion, .flashCardAnswer{
+    
+        margin: 10px;
+    }
+    
+    .flashCard{
+        width: 400px;
+        height: 250px;
+        text-align: center;
+        padding: 20px;
+        margin: 50px;
+    
+        border: solid black;
+        border-radius: 30px;
+    }
+    
