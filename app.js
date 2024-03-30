@@ -21,6 +21,9 @@ flashCardsContainer.style.display = 'flex';
 // Appending the container to the body
 body.appendChild(flashCardsContainer);
 
+// Variable to store the count of flashcards
+let flashcardCount = 0;
+
 let generateBtn = document.getElementById('generateBtn');
 
 generateBtn.addEventListener('click', function () {
@@ -65,10 +68,26 @@ generateBtn.addEventListener('click', function () {
     deleteBtn.addEventListener('click', function () {
         flashCard.remove();
     });
-    
+
     flashCard.appendChild(flashCardQuestion);
     flashCard.appendChild(showAnswer);
     flashCard.appendChild(deleteBtn);
 
-    flashCardsContainer.appendChild(flashCard); // Appending to the same container
+        // Append to the current flashCardsContainer, 3 flashcards per container
+    if (flashcardCount % 3 === 0) { // Check if the count is a multiple of 3
+        // Create a new flashCardsContainer
+        flashCardsContainer = document.createElement('div');
+        flashCardsContainer.setAttribute('class', 'flashCardsContainer');
+        flashCardsContainer.style.display = 'flex';
+        body.appendChild(flashCardsContainer); // Append the new container to the body
+    }
+
+    flashCardsContainer.appendChild(flashCard); // Append the flashcard to the current container
+
+    flashcardCount++; // Increment the flashcard count when a flashcard is created
 });
+
+// Display the total number of flashcards created
+let flashcardCountElement = document.createElement('p');
+flashcardCountElement.textContent = `Total Flashcards: ${flashcardCount}`;
+body.appendChild(flashcardCountElement);
