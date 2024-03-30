@@ -14,7 +14,9 @@
 
         <div class="container">
 
-        <h1>Create Your Flashcards</h1>
+        <div class="title"><h1>Flashcards Application:</h1>
+        <h3>create your own flashcards</h3></div>
+        
 
         <div class="btn">
             <button id="startBtn">Create a flashcard</button>
@@ -23,16 +25,18 @@
         <form id="form">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Add a Question</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" required minlength="3" maxlength="30">
+            <input type="text" class="form-control" id="exampleFormControlInput1" required minlength="3" maxlength="130">
           </div>
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Add an Answer</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required minlength="3" maxlength="30"></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required minlength="3" maxlength="130"></textarea>
           </div>
           <div class="btn">
             <button id="generateBtn">Generate</button>
         </div>
         </form>
+
+        <div class="totalFlashcards"></div>
        
         </div>
         <script src="app.js" async defer></script>

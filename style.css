@@ -1,16 +1,26 @@
+body{
+    background-image: url(https://imgs.search.brave.com/gLX-Svg57849LQ0ldJm6u-R3_SgYXMPI94mrVSkZMhs/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE0/ODE2Mjc4MzQ4NzYt/Yjc4MzNlOGY1NTcw/P3E9ODAmdz0xMDAw/JmF1dG89Zm9ybWF0/JmZpdD1jcm9wJml4/bGliPXJiLTQuMC4z/Jml4aWQ9TTN3eE1q/QTNmREI4TUh4elpX/RnlZMmg4Tm54OGJH/VmhjbTVwYm1kOFpX/NThNSHg4TUh4OGZE/QT0);
+    background-size: cover;
+}
+
+
 .container{
     text-align: center;
     
     }
     
-    h1{
+    .title{
         text-align: center;
         margin: 50px;
+        border-radius: 30px;
+        width: 50%;
+        background-color: bisque;
     }
     
     #startBtn,#generateBtn{
         border-radius: 30px;
         padding: 15px;
+        background-color: beige;
     }
     
     
@@ -23,6 +33,7 @@
         margin-top: 20px;
         padding: 20px;
         display: none;
+        background-color: bisque;
         
     }
     
@@ -49,3 +60,22 @@
         border-radius: 30px;
     }
     
+
+    .deleteBtn, .showAnswer{
+        border-radius: 30px;
+        padding: 10px;
+        margin: 10px;
+    }
+
+
+    .totalFlashcards{
+
+        text-align: center;
+
+        border-radius: 30px;
+
+        margin: 30px;
+        width: 30%;
+        background-color: bisque;
+
+    }

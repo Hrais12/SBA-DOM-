@@ -14,6 +14,7 @@ startBtn.addEventListener('click',function () {
 // Selecting the body element
 let body = document.querySelector('body');
 
+
 // Creating flashCardsContainer outside the event listener
 let flashCardsContainer = document.createElement('div');
 flashCardsContainer.setAttribute('class', 'flashCardsContainer');
@@ -86,7 +87,7 @@ generateBtn.addEventListener('click', function () {
     // Check if inputs are valid
     
     if (!questionInput.checkValidity() || !answerInput.checkValidity()) {
-        window.alert('Question and Answer must be between 3 and 30 characters long.');
+        window.alert('Question and Answer must be between 3 and 130 characters long.');
         return;
     }
 
@@ -109,16 +110,23 @@ generateBtn.addEventListener('click', function () {
    
     // Change background color of each flashcard
    let flashCards = document.querySelectorAll('.flashCard');
-   
+
     flashCards.forEach(function(card) {
     card.style.backgroundColor = 'lightblue';
     });
    
+    //  // Update the document title to include the flashcard count
+    //  document.title = `Flashcard Application - ${flashcardCount} Flashcards created`; 
+
     // Display the total number of flashcards created
     flashcardCountElement.textContent = `Total Flashcards: ${flashcardCount}`;
 });
 
 // Display the total number of flashcards created
-let flashcardCountElement = document.createElement('p');
+
+let totalFlashcard=document.querySelector('.totalFlashcards')
+let flashcardCountElement = document.createElement('h2');
 flashcardCountElement.textContent = `Total Flashcards: ${flashcardCount}`;
-body.appendChild(flashcardCountElement);
+totalFlashcard.appendChild(flashcardCountElement);
+
+
