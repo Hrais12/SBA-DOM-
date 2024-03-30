@@ -60,7 +60,7 @@ function createFlashcard(question, answer) {
     deleteBtn.textContent = 'Delete';
 
     deleteBtn.addEventListener('click', function () {
-        flashCard.remove();
+        deleteBtn.parentNode.remove();           //Navigate to the parent element and remove the flashcard. same us flashCard.remove();
         flashcardCount--; // Decrement the flashcard count when a flashcard is deleted
         flashcardCountElement.textContent = `Total Flashcards: ${flashcardCount}`; // Update the count displayed on the screen
         
@@ -82,6 +82,13 @@ generateBtn.addEventListener('click', function () {
     let answerInput = document.querySelector('#exampleFormControlTextarea1');
     let questionValue = questionInput.value;
     let answerValue = answerInput.value;
+
+    // Check if inputs are valid
+    
+    if (!questionInput.checkValidity() || !answerInput.checkValidity()) {
+        window.alert('Question and Answer must be between 3 and 30 characters long.');
+        return;
+    }
 
     // Create a new flashcard
     let flashCard = createFlashcard(questionValue, answerValue);

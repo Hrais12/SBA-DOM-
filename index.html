@@ -23,11 +23,11 @@
         <form id="form">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Add a Question</label>
-            <input type="text" class="form-control" id="exampleFormControlInput1" >
+            <input type="text" class="form-control" id="exampleFormControlInput1" required minlength="3" maxlength="30">
           </div>
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Add an Answer</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required minlength="3" maxlength="30"></textarea>
           </div>
           <div class="btn">
             <button id="generateBtn">Generate</button>
