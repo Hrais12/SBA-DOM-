@@ -94,7 +94,7 @@ generateBtn.addEventListener('click', function () {
     let flashCard = createFlashcard(questionValue, answerValue);
    
 
-        // Append to the current flashCardsContainer, 3 flashcards per container
+    // Append to the current flashCardsContainer, 3 flashcards per container
     if (flashcardCount % 3 === 0) { // Check if the count is a multiple of 3
         // Create a new flashCardsContainer
         flashCardsContainer = document.createElement('div');
@@ -106,6 +106,14 @@ generateBtn.addEventListener('click', function () {
     flashCardsContainer.appendChild(flashCard); // Append the flashcard to the current container
 
     flashcardCount++; // Increment the flashcard count when a flashcard is created
+   
+    // Change background color of each flashcard
+   let flashCards = document.querySelectorAll('.flashCard');
+   
+    flashCards.forEach(function(card) {
+    card.style.backgroundColor = 'lightblue';
+    });
+   
     // Display the total number of flashcards created
     flashcardCountElement.textContent = `Total Flashcards: ${flashcardCount}`;
 });
