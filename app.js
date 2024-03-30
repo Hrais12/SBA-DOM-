@@ -107,6 +107,9 @@ generateBtn.addEventListener('click', function () {
     flashCardsContainer.appendChild(flashCard); // Append the flashcard to the current container
 
     flashcardCount++; // Increment the flashcard count when a flashcard is created
+
+    // Clear input fields
+    clearFields();
    
     // Change background color of each flashcard
    let flashCards = document.querySelectorAll('.flashCard');
@@ -130,3 +133,11 @@ flashcardCountElement.textContent = `Total Flashcards: ${flashcardCount}`;
 totalFlashcard.appendChild(flashcardCountElement);
 
 
+
+function clearFields() {
+    // Clear question and answer input fields
+    let questionInput = document.querySelector('#exampleFormControlInput1');
+    let answerInput = document.querySelector('#exampleFormControlTextarea1');
+    questionInput.value = '';
+    answerInput.value = '';
+}
